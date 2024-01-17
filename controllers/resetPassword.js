@@ -33,7 +33,7 @@ exports.createAndSendToken=async(req,res)=>{
         },{new:true});
 
         //send mail
-        const url = `https://hushmate-frontend.onrender.com/resetpassword/${token}`;
+        const url = `https://hushmateui.vercel.app/resetpassword/${token}`;
         await sendMail("Hush Mate",email,"Heres your password reset url",passwordResetTemplate(url));
 
         return res.status(200).json({
