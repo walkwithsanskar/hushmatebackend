@@ -33,7 +33,7 @@ exports.createAndSendToken=async(req,res)=>{
         },{new:true});
 
         //send mail
-        const url = `http://localhost:3000/resetpassword/${token}`;
+        const url = `https://hushmate-frontend.onrender.com/resetpassword/${token}`;
         await sendMail("Hush Mate",email,"Heres your password reset url",passwordResetTemplate(url));
 
         return res.status(200).json({
